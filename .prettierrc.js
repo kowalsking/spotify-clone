@@ -1,0 +1,3 @@
+{
+  "endOfLIne": "auto"
+}
