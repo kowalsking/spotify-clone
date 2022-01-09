@@ -14,7 +14,8 @@ const run = async () => {
         songs: {
           create: artist.songs.map(song => ({
             name: song.name,
-            duration: song.duration
+            duration: song.duration,
+            url: song.url
           }))
         }
       }
