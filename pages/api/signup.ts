@@ -23,11 +23,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return
   }
 
-  const token = jwt.sign({
-    email: user.email,
-    id: user.id,
-    time: Date.now()
-  },
+  const token = jwt.sign(
+    {
+      email: user.email,
+      id: user.id,
+      time: Date.now()
+    },
     'hello',
     { expiresIn: '8h' }
   )
@@ -42,6 +43,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       secure: process.env.NODE_ENV === 'production'
     })
   )
+
+  console.log('res', res)
 
   res.json(user)
 }

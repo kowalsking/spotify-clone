@@ -14,11 +14,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   })
 
   if (user && bcrypt.compareSync(password, user.password)) {
-    const token = jwt.sign({
-      id: user.id,
-      email: user.email,
-      time: Date.now()
-    },
+    const token = jwt.sign(
+      {
+        id: user.id,
+        email: user.email,
+        time: Date.now()
+      },
       'hello',
       {
         expiresIn: '8h'
