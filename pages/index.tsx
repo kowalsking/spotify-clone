@@ -1,4 +1,4 @@
-import GradientLayout from '../components/gradientLayout';
+import GradientLayout from '../components/gradientLayout'
 
 const Home = () => {
   return (
