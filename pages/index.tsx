@@ -6,7 +6,6 @@ import prisma from '../lib/prisma'
 
 const Home = ({ artists }) => {
   const { user } = useMe()
-
   return (
     <GradientLayout
       color="red"
@@ -24,7 +23,7 @@ const Home = ({ artists }) => {
           <Text fontSize="md">only visible to you</Text>
         </Box>
         <Flex>
-          {artists.map(artist => (
+          {/* {artists.map(artist => (
             <Box paddingX="10px" width="20%">
               <Box bg="gray.900" borderRadius="4px" padding="15px" width="100%">
                 <Image src="https://placekitten.com/300/300" borderRadius="100%"/>
@@ -34,7 +33,7 @@ const Home = ({ artists }) => {
                 </Box>
               </Box>
             </Box>
-          ))}
+          ))} */}
         </Flex>
       </Box>
     </GradientLayout>

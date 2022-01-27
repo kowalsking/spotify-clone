@@ -44,7 +44,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     })
   )
 
-  console.log('res', res)
-
   res.json(user)
 }
